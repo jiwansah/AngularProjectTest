@@ -1,0 +1,30 @@
+<br/><br/>
+<form [formGroup]="formGroup" (ngSubmit)="register(formGroup.value)" class="display">
+  <div>
+   <label>User Name </label>
+      <input type="text" [formControl]="formGroup.controls['userName']">
+  </div> <br/>
+  <div>
+    <label>Password </label>
+    <input type="text" [formControl]="formGroup.controls['password']">
+</div> <br/>
+  <div>
+      <label>Name </label>
+      <input type="text" [formControl]="formGroup.controls['name']">
+  </div> <br/>
+
+  <div>
+    <label>Email </label>
+    <input type="text" [formControl]="formGroup.controls['email']">
+  </div> <br/>
+
+  <div>
+     <label>Age </label>
+     <input type="text" [formControl]="formGroup.controls['age']">
+ </div> <br/>
+
+ <div>
+
+      <input type="submit" value="Register">
+ </div>
+</form>

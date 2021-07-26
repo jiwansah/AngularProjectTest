@@ -1,0 +1,10 @@
+<b>Simple Application</b> &nbsp;&nbsp;
+<a (click)='callHome();' routerLink="/home">Home</a> &nbsp;
+<a routerLink='/registratin'>Sign Up</a> &nbsp;
+<a *ngIf="!isValidSession" routerLink='/login'>Login</a> &nbsp;
+<a routerLink='/usersList'>Users List</a> &nbsp;
+<a routerLink='/addCustomer'>Add Customer</a> &nbsp;
+<a routerLink='/customerList'>Customer List</a> &nbsp;
+<a *ngIf="isValidSession" (click)='logout();' routerLink='/home'>Logout</a> &nbsp;
+
+<router-outlet></router-outlet>

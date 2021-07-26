@@ -1,0 +1,13 @@
+
+<br/> <br/><div> Users Data</div>
+<div>
+  <ul>
+    <li *ngFor="let user of usersData">
+     <b>Name:</b> {{user.name}} &nbsp;&nbsp;
+     <b>UserName:</b> {{user.userName}} &nbsp;&nbsp;
+     <b>Email:</b> {{user.email}} &nbsp;&nbsp;
+     <button (click)='deleteUser(user.userName)'>Delete</button>  &nbsp;&nbsp;
+    </li>
+  </ul>
+
+</div>

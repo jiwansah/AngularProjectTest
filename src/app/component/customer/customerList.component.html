@@ -1,0 +1,12 @@
+<div> <br/>
+<h3>Customer Data</h3>
+  <table>
+    <tr>   <th *ngFor = "let column of headers"> {{column.name}}  </th>    </tr>
+    <tr *ngFor = "let row of customersData">
+      <td *ngFor = "let column of headers">
+        {{row[column.id]}}
+      </td>
+    </tr>
+  </table>
+
+</div>

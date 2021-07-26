@@ -1,0 +1,60 @@
+<br/><br/>
+<form [formGroup]="formGroup" (ngSubmit)="saveCustomer(formGroup.value)" class="display">
+  <div class="form-group col">
+    <label>Title</label>
+    <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+        <option value="">-Select-</option>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+        <option value="Ms">Ms</option>
+    </select>
+    <div *ngIf='submitted && f.title.errors' class="invalid-feedback">
+        <div *ngIf='f.title.errors.required'>Title is required</div>
+    </div>
+</div><br/>
+  <div>
+   <label> Name </label>
+      <input type="text" formControlName='name'>
+      <div *ngIf='submitted && f.name.errors' class="invalid-feedback">
+        <div *ngIf='f.name.errors.required'>Name is required</div>
+      </div>
+  </div> <br/>
+
+  <div>
+    <label>Address </label>
+    <input type="text" formControlName="address">
+    <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+      <div *ngIf="f.address.errors.required">Address is required</div>
+    </div>
+</div> <br/>
+  <div>
+      <label>Mobile Number </label>
+      <input type="text" formControlName="mobile">
+      <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+        <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+      </div>
+  </div> <br/>
+  <div>
+    <label> Retype Mobile no </label>
+       <input type="text" formControlName="mobile2">
+       <div *ngIf="submitted && f.mobile2.errors" class="invalid-feedback">
+        <div *ngIf="f.mobile2.errors.required">Confirm Mobile is required</div>
+        <div *ngIf="f.mobile2.errors.mustMatch">Mobile number must match</div>
+    </div>
+
+   </div> <br/>
+  <div>
+    <label>Email </label>
+    <input type="text" formControlName="email">
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Email is required</div>
+      <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
+  </div> <br/>
+
+ <div>
+      <input type="submit" value="Save"> &nbsp;&nbsp;&nbsp;
+      <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+ </div>
+</form>

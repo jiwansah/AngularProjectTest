@@ -1,0 +1,15 @@
+<form #empForm="ngForm" (ngSubmit)="login(empForm.value)" class="display">
+  <br/><br/>
+  <div style="text-align: center;">
+    <label><b>User Name:</b></label>
+    <input type="text" name="userName" ngModel/>
+  </div>
+  <br/>
+  <div style="text-align: center;">
+    <label><b>Password:</b></label>
+    <input type="text" name="password" ngModel/>
+  </div>
+  <div style="text-align: center;"> <br/>
+    <input type="submit" value="Login"/>
+  </div>
+</form>
